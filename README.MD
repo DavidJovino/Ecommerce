@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto
 
-<p align="center">Criando um site parecido com o da Amazon
+<p align="center">Criando um site parecido com o da Amazon </p>
 
 Faltando:
 
@@ -33,5 +33,3 @@ SQL injection (burp e sqlmap)
 Active Directory
 Fuzz (com VPN)
 Dodotpwn
-
-</p>

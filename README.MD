@@ -4,6 +4,7 @@
 
 <p align="center">Criando um site parecido com o da Amazon </p>
 
+<p align="left">
 Faltando:
 
 -- Checkout --
@@ -33,3 +34,4 @@ SQL injection (burp e sqlmap)
 Active Directory
 Fuzz (com VPN)
 Dodotpwn
+</p>

@@ -5,7 +5,7 @@
 <p align="center">Criando um site parecido com o da Amazon </p>
 
 
-<title>Faltando:</title>
+<p>Faltando:</p>
 
 <body>
 <dl>

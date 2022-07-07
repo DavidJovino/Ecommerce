@@ -32,7 +32,8 @@ app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
 });
 
-const port = process.env.PORT || 5000;
+/* Usar qualquer porta disponível, mas a porta padrão sera 6000 */
+const port = process.env.PORT || 6000;
 app.listen(port, () => {
   console.log(`serve at http://localhost:${port}`);
 });

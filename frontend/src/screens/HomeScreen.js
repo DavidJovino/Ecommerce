@@ -9,6 +9,12 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 // import data from '../data';
 
+// Usando o reducer ao inves de useState para administrar states complexas
+/* No Fetch Resquest tem o loading, pois esta 'puxando' os dados do backend
+   No Fetch Succes quer dizer que pegou o action.payload que no caso são os produtos e o loading é falso, pois já deu certo, não tem o pq ter loading
+   No Fetch Fail o loading é falso pois não deu certo pegar o payload do backend, então mostrar o erro da action.payload
+   Default significa que caso não pertencer aos tres estados, fica então no "current state"
+*/
 const reducer = (state, action) => {
   switch (action.type) {
     case 'FETCH_REQUEST':
@@ -21,7 +27,7 @@ const reducer = (state, action) => {
       return state;
   }
 };
-
+// Na função useReducer o loading é true pois é a primeira coisa que a screen faz é pegar os produtos no backend
 function HomeScreen() {
   const [{ loading, error, products }, dispatch] = useReducer(logger(reducer), {
     products: [],
@@ -29,6 +35,7 @@ function HomeScreen() {
     error: '',
   });
   // const [products, setProducts] = useState([]);
+  // Pegar os produtos na backend pelo axios. try e catch é para pegar o erro caso der e nao parar o serviço
   useEffect(() => {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });

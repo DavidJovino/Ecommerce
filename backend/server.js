@@ -7,6 +7,7 @@ import productRouter from './routes/productRoutes.js';
 import userRouter from './routes/userRoutes.js';
 import orderRouter from './routes/orderRoutes.js';
 
+// Fetch variaveis do .env para colocar no mongoose
 dotenv.config();
 
 mongoose
@@ -32,8 +33,8 @@ app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
 });
 
-/* Usar qualquer porta disponível, mas a porta padrão sera 6000 */
-const port = process.env.PORT || 6000;
+/* Usar qualquer porta disponível, mas a porta padrão sera 5000 */
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`serve at http://localhost:${port}`);
 });

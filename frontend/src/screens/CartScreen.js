@@ -33,6 +33,7 @@ export default function CartScreen() {
   };
 
   const checkoutHandler = () => {
+    // Faz um check para ver se o usuário esta autenticado, se sim, continua para o shipping
     navigate('/signin?redirect=/shipping');
   };
 

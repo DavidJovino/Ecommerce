@@ -32,6 +32,7 @@ function reducer(state, action) {
             item._id === existItem._id ? newItem : item
           )
         : [...state.cart.cartItems, newItem];
+      // salvando no local storage para caso apertar f5, não apagar
       localStorage.setItem('cartItems', JSON.stringify(cartItems));
       // os três pontos é para manter o que esta no cart, e depois adiciona o item mantendo o estado do cart
       return { ...state, cart: { ...state.cart, cartItems } };   
